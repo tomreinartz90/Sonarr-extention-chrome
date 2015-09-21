@@ -10,7 +10,11 @@ var background = {
     console.log(num);
   },
   setBadge : function (num) {
+    if (num != "0") {
     chrome.browserAction.setBadgeText({text: num});
+  } else {
+    chrome.browserAction.setBadgeText({text:''});
+  }
   },
   setTimer : function (data) { 
     // set interval
